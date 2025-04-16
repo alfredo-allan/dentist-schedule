@@ -10,6 +10,7 @@
     min-height: 812px;
     color: var(--text-color-page);
     background-color: white;
+    margin-bottom: 20vh;
 
 }
 
@@ -26,6 +27,7 @@
         /* A altura se ajusta ao conteúdo em mobile */
         padding: 20px;
         /* Adicione um pouco de espaçamento interno em mobile, se necessário */
+        margin-bottom: 20vh;
     }
 
 }
@@ -76,7 +78,8 @@
 
 @media (max-width: 768px) {
     .social-network {
-        margin-top: 45vh;
+        margin-top: 41vh;
+
     }
 }
 
