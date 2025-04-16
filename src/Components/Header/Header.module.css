@@ -1,0 +1,207 @@
+/* Header.module.css */
+
+.custon-header {
+    display: flex;
+    justify-content: end;
+    direction: ltr;
+    padding-left: 50px;
+    align-items: center;
+    /* Alinha verticalmente os itens no header */
+    background-color: #f8f9fa;
+    /* Cor de fundo padrão do header */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+    /* Linha de separação inferior */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* Espaço entre logo e toggle button */
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.content-logo {
+    display: flex;
+    justify-content: left;
+    max-width: fit-content;
+}
+
+.logo-ico {
+    width: 50px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* Para o toggler em mobile */
+    padding: 0;
+    width: 100%;
+    /* Garante que o navbar ocupe toda a largura do container */
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+    /* Alinha os itens à direita em desktop */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-item-text {
+    display: flex;
+    justify-content: end;
+    margin-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+    padding: 5px;
+    color: #343a40;
+    /* Cor padrão do texto do menu */
+    text-decoration: none;
+    /* Remove sublinhado padrão de links */
+}
+
+.nav-item-text:hover {
+    background-color: var(--text-color-page);
+    color: white;
+}
+
+/* Estilos para o toggle menu mobile */
+.mobile-menu-toggle {
+    display: none;
+    /* Escondido por padrão em telas maiores */
+    background: none;
+    border: none;
+    padding: 10px;
+    /* Adiciona um pouco de padding para facilitar o toque */
+    cursor: pointer;
+    outline: none;
+    /* Remove o contorno padrão do botão */
+}
+
+.menu-icon {
+    height: 30px;
+    /* Ajuste o tamanho do ícone do menu */
+    width: auto;
+}
+
+/* Estilos para o menu mobile quando aberto */
+.navbar-collapse.open {
+    transform: translateX(50px);
+    /* Experimente um valor diferente de 0 */
+    /* Menu totalmente visível */
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos para o menu em telas menores */
+@media (max-width: 991.98px) {
+    .custon-header {
+        justify-content: space-between;
+        /* Alinha logo e toggle */
+        padding-left: 15px;
+        /* Ajusta o padding esquerdo */
+        flex-wrap: wrap;
+        /* Permite que os itens quebrem para a próxima linha se necessário */
+    }
+
+    .container {
+        flex-direction: row;
+        /* Garante que logo e toggle fiquem na mesma linha */
+        justify-content: space-between;
+        /* Espaço entre logo e toggle */
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+        /* Esconde o menu padrão em mobile */
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: -50px;
+        /* Escondido à esquerda por padrão */
+        width: 250px;
+        /* Largura do menu mobile */
+        height: 100%;
+        background-color: var(--text-color-page);
+        /* Cor de fundo do menu mobile */
+        padding-top: 60px;
+        /* Espaçamento para o conteúdo abaixo do header */
+        z-index: 1000;
+        /* Garante que fique acima de outros elementos */
+        flex-direction: column;
+        align-items: flex-start;
+        transition: transform 0.3s ease-in-out, visibility 0s 0.3s, opacity 0.3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        padding: 13px 3px;
+        border-bottom: 1px solid var(--light-blue);
+    }
+
+    .nav-item-text {
+        color: white;
+        justify-content: start;
+        /* Alinha o texto à esquerda no menu mobile */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        /* Mostra o botão de toggle em telas menores */
+    }
+
+    .navbar-collapse.open .nav-item-text {
+        color: white;
+    }
+
+    .navbar-collapse.open .nav-item:last-child {
+        border-bottom: none;
+    }
+}

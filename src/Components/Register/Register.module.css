@@ -1,0 +1,24 @@
+.form-label {
+    display: flex;
+    justify-content: left;
+    color: var(--text-color-page)
+}
+
+.btn-register {
+    border: none;
+    background-color: var(--text-color-page);
+    color: white;
+    width: 80%;
+    height: 45px;
+    border-radius: 4px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.btn-register:hover {
+    background-color: #0b2245c6;
+    color: white;
+
+
+}

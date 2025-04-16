@@ -1,0 +1,97 @@
+.content-home-page {
+    background-image: url('../../Assets/Img/background-page.png');
+    /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    background-position: center;
+    /* Centraliza a imagem horizontal e verticalmente */
+    background-size: contain;
+
+    min-height: 812px;
+    color: var(--text-color-page);
+    background-color: white;
+
+}
+
+@media (max-width: 768px) {
+    .content-home-page {
+        background-image: url('../../Assets/Img/background-page-mobile.png');
+        /* Caminho da imagem mobile */
+        background-repeat: no-repeat;
+        background-position: top center;
+        /* Ajuste a posição conforme necessário para mobile */
+        background-size: cover;
+        /* Cubra a tela em mobile */
+        min-height: auto;
+        /* A altura se ajusta ao conteúdo em mobile */
+        padding: 20px;
+        /* Adicione um pouco de espaçamento interno em mobile, se necessário */
+    }
+
+}
+
+.content-footer-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* Remova a margem superior que o posiciona tão abaixo */
+    /* margin-top: 85%; */
+
+    /* Adicione as propriedades para fixar ao fundo */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--ligth-blue);
+    /* Ou qualquer cor de fundo desejada para o footer */
+    color: white;
+    /* Cor do texto do footer */
+    padding: 10px 0;
+    /* Espaçamento interno superior e inferior */
+    text-align: center;
+    /* Opcional: centralizar o texto dentro do footer */
+    z-index: 100;
+    /* Opcional: garantir que o footer fique acima de outros elementos */
+}
+
+.social-network {
+    /* background-color: var(--light-blue); */
+    text-align: center;
+    /* Centraliza o texto dentro do elemento */
+    max-width: 400px;
+    height: 100px;
+    /* Define a largura máxima */
+    margin-left: auto;
+    /* Empurra a margem esquerda */
+    margin-right: auto;
+    /* Empurra a margem direita */
+    display: block;
+    /* Garante que seja um elemento de bloco */
+    margin-top: 60vh;
+    /* Opcional: Adiciona margem superior */
+    margin-bottom: 20px;
+    /* Opcional: Adiciona margem inferior */
+    padding: 33px;
+}
+
+@media (max-width: 768px) {
+    .social-network {
+        margin-top: 45vh;
+    }
+}
+
+.social-network-instagran,
+.social-network-facebook,
+.social-network-youtube,
+.social-network-linkedin {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.social-network-youtube {
+    position: relative;
+}
+
+@media (max-width: 912px) {
+    .content-home-page {}
+}

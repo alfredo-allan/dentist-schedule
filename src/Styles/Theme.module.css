@@ -1,0 +1,12 @@
+:root {
+    --primary-font: 'Nunito';
+    --light-blue: #309cce;
+    --text-color-page:#0B2245;
+}
+
+html {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    font-family: var(--primary-font) !important;
+}

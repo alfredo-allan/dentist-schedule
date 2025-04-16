@@ -1,0 +1,7 @@
+.title-text-page {
+    font-family: var(--primary-font);
+    color: var(--text-color-page);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 2vh;
+}
